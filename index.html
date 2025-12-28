@@ -1,3 +1,115 @@
-<p>DREAM SPACE TECHNOLOGY LIMITED</p>
-<p>Redirecting...</p>
-<meta http-equiv="Redirecting..." content="5;URL=https://global.app.mi.com/developer?id=1126508&developerName=DREAM%20SPACE%20TECHNOLOGY%20LIMITED&publisherName=Dream%20Space" />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACE TECHNOLOGY LIMITED</title>
+    <style>
+        :root {
+            --primary-color: #4285f4;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-gradient);
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .name {
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, #ddd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .timer-circle {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .seconds {
+            animation: none; /* 防止文字跟着转 */
+            position: absolute;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1><span class="name">CHOM</span></h1>
+        <p>Redirecting...</p >
+        
+        <div class="timer-circle">
+            <span id="countdown" class="seconds">3</span>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 3;
+        const countdownElement = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = "https://global.app.mi.com/developer?id=1126508&developerName=DREAM%20SPACE%20TECHNOLOGY%20LIMITED&publisherName=Dream%20Space";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
